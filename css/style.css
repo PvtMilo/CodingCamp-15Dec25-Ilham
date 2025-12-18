@@ -1,0 +1,381 @@
+/* 1. Use a more-intuitive box-sizing model */
+*, *::before, *::after {
+  box-sizing: border-box;
+}
+
+/* 2. Remove default margin */
+*:not(dialog) {
+  margin: 0;
+}
+
+/* 3. Enable keyword animations */
+@media (prefers-reduced-motion: no-preference) {
+  html {
+    interpolate-size: allow-keywords;
+  }
+}
+
+body {
+  /* 4. Add accessible line-height */
+  line-height: 1.5;
+  /* 5. Improve text rendering */
+  -webkit-font-smoothing: antialiased;
+}
+
+/* 6. Improve media defaults */
+img, picture, video, canvas, svg {
+  display: block;
+  max-width: 100%;
+}
+
+/* 7. Inherit fonts for form controls */
+input, button, textarea, select {
+  font: inherit;
+}
+
+/* 8. Avoid text overflows */
+p, h1, h2, h3, h4, h5, h6 {
+  overflow-wrap: break-word;
+}
+
+/* 9. Improve line wrapping */
+p {
+  text-wrap: pretty;
+}
+h1, h2, h3, h4, h5, h6 {
+  text-wrap: balance;
+}
+
+/*
+  10. Create a root stacking context
+*/
+
+h1,p,span,label{
+    color: white;
+}
+#root, #__next {
+  isolation: isolate;
+}
+
+html{
+    background-color: #0F172A;
+}
+
+header{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    /* background-color: aqua; */
+    margin: 0.3em 4em 0.5em 4em;
+}
+
+nav{
+    display: flex;
+    justify-content: space-around;
+    gap : 0.5em;
+    font-size: 0.7em;
+}
+
+.nav-child{
+    text-decoration: none;
+    color: white;
+}
+
+.logo{
+    width: 45px;
+    height: 45px;
+    border-radius: 50%;
+    background-image: url(../assets/logo.png);
+    background-size: cover;
+    border: 2px solid black;
+}
+
+.page-1{
+    background-image: url(../assets/company-image.jpg);
+    background-size: cover;
+    background-position: center;
+    padding: 0em 4em 0em;
+    height: 90vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.welcome-wrapper{
+    width: 70%;
+}
+
+.hero-title{
+    font-size: 2em;
+    font-weight: 600;
+    line-height: 1em;
+    padding-bottom: 0.5em;
+}
+
+.hero-desc {
+    font-size: 0.8rem;
+    line-height: 1em;
+}
+
+#page-2{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+#about-us{
+    margin-top: 1em;
+    font-size: 1.5em;
+    margin-bottom: 1em;
+}
+.location-wrapper{
+    display: grid;
+    gap: 2em;
+    grid-template-columns: repeat(3,1fr);
+    padding: 2em;
+    max-width: 600px;
+    margin: 0 auto;     
+}
+
+.headquarter{
+    background-size: cover;
+    border-radius: 50%;
+}
+
+#page-3{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.portofolio{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.projects-title{
+    margin-top: 1em;
+    font-size: 1.5em;
+    margin-bottom: 1em;
+}
+
+.projects-image-wrapper{
+  display: grid;
+  gap: 16px;
+  grid-template-columns: repeat(3,1fr);
+  padding: 2em;
+  max-width: 700px;
+  margin: 0 auto;     
+}
+
+.projects-image-wrapper img{
+  width: 100%;
+  aspect-ratio: 1 / 1; 
+  object-fit: cover; 
+  object-position: center;
+  border-radius: 12px;
+  display: block;
+}
+
+#page-4{
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+}
+
+.box-wrapper{
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 24px;
+  padding: 2em 4em;
+  text-align: left;
+}
+
+.form-wrapper,
+.input-display{
+  width: 100%;
+}
+
+.form-example{
+  display: grid;
+  gap: 14px;
+}
+
+.input-box{
+  width: 100%;
+  padding: 5px 5px;
+  border: 1px solid rgba(255,255,255,.2);
+  background: rgb(255, 255, 255);
+  color: rgb(0, 0, 0);
+  outline: none;
+}
+
+.input-box::placeholder{
+  color: rgba(0, 0, 0, 0.6);
+}
+
+button{
+  width: 100%;
+  padding: 10px 12px;
+  border: 1px solid rgba(255,255,255,.2);
+  background: rgb(255, 255, 255);
+  color: black;
+  cursor: pointer;
+}
+
+/* === Output (DOM display) === */
+.input-display{
+  border: 1px solid rgba(255,255,255,.15);
+  padding: 16px;
+  display: grid;
+  gap: 10px;
+}
+
+/* tiap baris output: label kiri & value kanan */
+.output-row{
+  display: grid;
+  grid-template-columns: 140px 1fr; /* Nama | value */
+  align-items: center;
+}
+
+.output-row .key{
+  opacity: .85;
+  color: white;
+}
+
+.output-row .value{
+  font-weight: 600;
+  color: #fff;
+  word-break: break-word;
+}
+
+
+.hamburger{
+  display: none;
+}
+
+#message{
+  padding: 10px 12px;
+  text-align: left;
+  vertical-align: top;
+}
+
+/* MOBILE */
+@media (max-width: 768px){
+
+  header{
+    margin: 0.8em 1.2em;
+    position: relative;
+  }
+
+  /* tombol hamburger muncul */
+  .hamburger{
+    display: flex;
+    width: 42px;
+    height: 42px;
+    border: 1px solid rgba(255,255,255,.25);
+    border-radius: 10px;
+    background: transparent;
+    cursor: pointer;
+
+    padding: 10px;
+    gap: 6px;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .hamburger span{
+    width: 22px;
+    height: 2px;
+    background: white;
+    display: block;
+    transition: transform .2s ease, opacity .2s ease;
+  }
+
+  /* nav jadi dropdown (hidden default) */
+  nav{
+    display: none;
+    position: absolute;
+    top: calc(100% + 10px);
+    right: 0;
+
+    flex-direction: column;
+    gap: 10px;
+
+    background: rgba(15, 23, 42, 0.95);
+    border: 1px solid rgba(255,255,255,.15);
+    border-radius: 12px;
+    padding: 12px;
+    width: min(240px, 90vw);
+    z-index: 50;
+  }
+
+  nav.open{
+    display: flex;
+  }
+
+  .nav-child{
+    padding: 10px 12px;
+    border: 1px solid rgba(255,255,255,.15);
+    border-radius: 10px;
+  }
+
+  /* hamburger jadi X */
+  .hamburger.is-open span:nth-child(1){
+    transform: translateY(8px) rotate(45deg);
+  }
+  .hamburger.is-open span:nth-child(2){
+    opacity: 0;
+  }
+  .hamburger.is-open span:nth-child(3){
+    transform: translateY(-8px) rotate(-45deg);
+  }
+
+  /* Hero */
+  .page-1{
+    padding: 0 1.2em;
+    height: auto;
+    min-height: 70vh;
+  }
+
+  .welcome-wrapper{ width: 100%; }
+
+  .hero-title{
+    font-size: 1.4em;
+    line-height: 1.1em;
+  }
+
+  .hero-desc{
+    font-size: .9rem;
+    line-height: 1.3em;
+  }
+
+  /* Headquarter & Projects -> 1 kolom */
+  .location-wrapper,
+  .projects-image-wrapper{
+    grid-template-columns: 1fr;
+    max-width: 100%;
+    padding: 1.2em;
+  }
+
+  .headquarter{
+    width: 110px;
+    aspect-ratio: 1/1;
+    object-fit: cover;
+    border-radius: 50%;
+    margin: 0 auto;
+  }
+
+  /* Contact -> 1 kolom */
+  .box-wrapper{
+    grid-template-columns: 1fr;
+    padding: 1.2em;
+    gap: 16px;
+  }
+
+  .output-row{
+    grid-template-columns: 110px 1fr;
+  }
+}

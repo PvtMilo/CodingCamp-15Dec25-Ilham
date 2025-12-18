@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Portofilio Pvt.Milo</title>
+    <link rel="stylesheet" href="./css/style.css" />
+  </head>
+  <body>
+    <!-- Header Content -->
+    <header>
+      <div class="logo"></div>
+
+      <button
+        class="hamburger"
+        id="hamburger"
+        aria-label="Open menu"
+        aria-expanded="false"
+        aria-controls="main-nav"
+        type="button"
+      >
+        <span></span><span></span><span></span>
+      </button>
+
+      <nav id="main-nav">
+        <a class="nav-child" href="#home">Home</a>
+        <a class="nav-child" href="#about-us">Our Profile</a>
+        <a class="nav-child" href="#page-3">Portofilio</a>
+        <a class="nav-child" href="#page-4">Message Us</a>
+      </nav>
+    </header>
+    <!-- Main Content -->
+    <main>
+      <!-- PAGE 1 -->
+      <div class="page-1" id="home">
+        <div class="welcome-wrapper">
+          <h1 class="hero-title">EMPOWERING YOUR BUSINESS GROWTH</h1>
+          <p class="hero-desc">
+            We provide trusted solutions to help your company grow stronger,
+            faster, and smarter. With professional services, innovative
+            strategies, and dedicated support, we make it simple for you to
+            achieve success.
+          </p>
+        </div>
+      </div>
+
+      <!-- PAGE 2 -->
+      <div id="page-2">
+        <h1 id="about-us">Our Headquarter</h1>
+      </div>
+
+      <div class="location-wrapper">
+        <img class="headquarter hq-1" src="./assets/logo.png" alt="" />
+        <img class="headquarter hq-2" src="./assets/logo.png" alt="" />
+        <img class="headquarter hq-3" src="./assets/logo.png" alt="" />
+      </div>
+
+      <!-- PAGE3 -->
+      <div id="page-3">
+        <div class="portofolio">
+          <h1 class="projects-title">PROJECTS</h1>
+          <div class="projects-image-wrapper">
+            <img class="project-a" src="./assets/porto-1.jpg" alt="" />
+            <img class="project-b" src="./assets/porto-2.png" alt="" />
+            <img class="project-c" src="./assets/porto-3.png" alt="" />
+          </div>
+        </div>
+      </div>
+      <div id="page-4">
+        <h1 class="projects-title">Contact Us</h1>
+        <div class="box-wrapper">
+          <div class="form-wrapper">
+            <form action="" method="get" class="form-example" id="contact-form">
+              <div class="name-field">
+                <label for="name">Enter your name: </label>
+                <br />
+                <input
+                  class="input-box"
+                  type="text"
+                  name="name"
+                  id="name"
+                  placeholder="Nama"
+                  required
+                />
+              </div>
+              <div class="birthday-field">
+                <label for="birthday">Birthday:</label>
+                <br />
+                <input
+                  class="input-box"
+                  type="date"
+                  id="birthday"
+                  name="birthday"
+                  required
+                />
+              </div>
+              <div class="gender-field">
+                <label for="gender">Jenis Kelamin:</label>
+                <br />
+                <input
+                  type="radio"
+                  id="laki"
+                  name="gender"
+                  value="laki-laki"
+                  required
+                />
+                <label for="html">Laki-Laki</label>
+                <input
+                  type="radio"
+                  id="perempuan"
+                  name="gender"
+                  value="perempuan"
+                />
+                <label for="css">Perempuan</label>
+              </div>
+              <div class="message-field">
+                <label for="message">Pesan:</label>
+                <br />
+                <textarea
+                  class="input-box"
+                  id="message"
+                  name="message"
+                  placeholder="Pesan"
+                ></textarea>
+              </div>
+              <button type="submit">Submit</button>
+            </form>
+          </div>
+          <!-- Input display -->
+          <div class="input-display">
+            <div class="output-row">
+              <div class="key">Current time</div>
+              <div class="value" id="out-time">-</div>
+            </div>
+            <div class="output-row">
+              <div class="key">Nama</div>
+              <div class="value" id="out-name">-</div>
+            </div>
+            <div class="output-row">
+              <div class="key">Tanggal Lahir</div>
+              <div class="value" id="out-birthday">-</div>
+            </div>
+            <div class="output-row">
+              <div class="key">Jenis Kelamin</div>
+              <div class="value" id="out-gender">-</div>
+            </div>
+            <div class="output-row">
+              <div class="key">Pesan</div>
+              <div class="value" id="out-message">-</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </main>
+    <!-- Footer External -->
+    <footer></footer>
+    <!-- JS External-->
+    <script src="./js/script.js"></script>
+  </body>
+</html>
