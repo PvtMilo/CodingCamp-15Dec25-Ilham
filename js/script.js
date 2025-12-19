@@ -66,7 +66,6 @@ form.addEventListener("submit", (e) => {
     greetingName.textContent = "Halo" + " " + name + " " + "👋";
   }
 
-  // 1) Saat pertama load, cek apakah sudah ada nama tersimpan
   window.addEventListener("DOMContentLoaded", () => {
     const savedName = localStorage.getItem("visitorName");
     if (savedName && savedName.trim().length >= 2) {
@@ -76,7 +75,6 @@ form.addEventListener("submit", (e) => {
     }
   });
 
-  // 2) Submit form -> validasi -> simpan -> tutup modal
 formModal.addEventListener("submit", (e) => {
   e.preventDefault();
 
@@ -94,7 +92,6 @@ formModal.addEventListener("submit", (e) => {
     return;
   }
 
-  // ✅ Tambahan validasi di sini
   if (!/^[A-Za-z\s]+$/.test(name)) {
     errorEl.textContent = "Nama hanya boleh huruf dan spasi (tanpa angka/simbol).";
     input.focus();
@@ -107,15 +104,11 @@ formModal.addEventListener("submit", (e) => {
   closeModal();
 });
 
-  // 3) Biar modal “wajib isi nama”: klik backdrop dan ESC tidak menutup
   modal.addEventListener("click", (e) => {
-    // Kalau user klik area gelap, kita tetap tahan modal
-    // (Sengaja dikosongkan / tidak close)
   });
 
   document.addEventListener("keydown", (e) => {
     if (e.key === "Escape" && modal.classList.contains("show")) {
-      // tahan ESC supaya tidak bisa skip
       e.preventDefault();
     }
   });
