@@ -103,7 +103,7 @@ form.addEventListener("submit", (e) => {
   }
 
   function setName(name) {
-    greetingName.textContent = "Halo" + " " + name + " " + "👋";
+    greetingName.textContent = name;
   }
 
   window.addEventListener("DOMContentLoaded", () => {

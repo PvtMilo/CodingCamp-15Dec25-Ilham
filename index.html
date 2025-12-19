@@ -30,7 +30,7 @@
 
       <nav id="main-nav">
         <a class="nav-child" href="#home">Home</a>
-        <a class="nav-child" href="#about-us">Location</a>
+        <a class="nav-child" href="#about-company">Our Profile</a>
         <a class="nav-child" href="#page-3">Portofilio</a>
         <a class="nav-child" href="#page-4">Contact</a>
       </nav>
@@ -39,7 +39,11 @@
     <main>
       <!-- PAGE 1 -->
       <div class="page-1" id="home">
-        <span id="greetingName"></span>
+        <div class="greeting-wrapper">
+          <span>Halo</span>
+          <span id="greetingName"> </span> 👋
+        </div>
+
         <div class="welcome-wrapper">
           <h1 class="hero-title">EMPOWERING YOUR BUSINESS GROWTH</h1>
           <p class="hero-desc">
@@ -53,16 +57,56 @@
 
       <!-- PAGE 2 -->
       <div id="page-2">
-        <h1 id="about-us">Our Headquarter</h1>
+        <section id="about-company" class="about-company">
+          <h1 class="projects-title">About the Company</h1>
+          <p class="hero-desc">
+            Vartech.id is a creative and technology-driven company focused on
+            building modern digital experiences. We help brands grow through
+            design, development, and strategic solutions.
+          </p>
+        </section>
+
+        <!-- VISION & MISSION -->
+        <section id="vision-mission" class="vision-mission">
+          <h1 class="projects-title">Vision & Mission</h1>
+
+          <div class="vm-grid">
+            <div class="vm-card">
+              <h2 class="vm-title">Vision</h2>
+              <p class="hero-desc">
+                To become a trusted partner that empowers businesses with
+                impactful digital solutions.
+              </p>
+            </div>
+
+            <div class="vm-card">
+              <h2 class="vm-title">Mission</h2>
+              <ul class="vm-list">
+                <li>Deliver high-quality web and branding services.</li>
+                <li>Create solutions that are simple, fast, and reliable.</li>
+                <li>Support clients with long-term growth strategies.</li>
+              </ul>
+            </div>
+          </div>
+        </section>
+        <h1 id="Location">Our Headquarter</h1>
       </div>
 
       <div class="location-wrapper">
         <div class="location-card">
-          <img class="headquarter hq-1" src="./assets/jakarta.png" alt="Jakarta" />
+          <img
+            class="headquarter hq-1"
+            src="./assets/jakarta.png"
+            alt="Jakarta"
+          />
           <p class="location-name">Jakarta</p>
         </div>
         <div class="location-card">
-          <img class="headquarter hq-2" src="./assets/yogyakarata.png" alt="Yogyakarta" />
+          <img
+            class="headquarter hq-2"
+            src="./assets/yogyakarata.png"
+            alt="Yogyakarta"
+          />
           <p class="location-name">Yogyakarta</p>
         </div>
         <div class="location-card">
@@ -182,12 +226,7 @@
 
         <form id="nameForm" autocomplete="off">
           <label for="visitorName">Nama</label>
-          <input
-            id="visitorName"
-            type="text"
-            placeholder="Nama"
-            required
-          />
+          <input id="visitorName" type="text" placeholder="Nama" required />
           <div class="error" id="nameError" role="alert"></div>
 
           <button type="submit">Submit</button>
@@ -197,7 +236,7 @@
 
     <!-- Footer External -->
     <footer>
-      <span class="footer-title">Created by Pvt.Milo</span>
+      <span class="footer-title">Created by Vartech.id</span>
     </footer>
     <!-- JS External-->
     <script src="./js/script.js"></script>

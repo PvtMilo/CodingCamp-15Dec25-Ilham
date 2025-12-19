@@ -111,6 +111,10 @@ nav{
     width: 70%;
 }
 
+.greeting-wrapper{
+  padding-bottom: 1em;
+}
+
 .hero-title{
     font-size: 2em;
     font-weight: 600;
@@ -200,6 +204,60 @@ nav{
   object-position: center;
   border-radius: 12px;
   display: block;
+}
+
+.about-company,
+.vision-mission{
+  margin: 0 auto;
+  padding: 1.4em 2em;
+  max-width: 900px;
+  text-align: center;
+}
+
+.about-company .projects-title,
+.vision-mission .projects-title{
+  margin-top: 0.5em;
+  margin-bottom: 0.7em;
+}
+
+.about-company .hero-desc,
+.vision-mission .hero-desc{
+  max-width: 780px;
+  margin: 0 auto;
+  line-height: 1.4em;
+}
+
+.vision-mission{
+  display: flex;
+  flex-direction: column;
+  gap: 1em;
+}
+
+.vm-grid{
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0,1fr));
+  gap: 16px;
+}
+
+.vm-card{
+  border: 1px solid rgba(255,255,255,.14);
+  padding: 14px 16px;
+  background: rgba(255, 255, 255, 0.03);
+  text-align: left;
+}
+
+.vm-title{
+  margin: 0 0 8px;
+  font-size: 1.1em;
+  color: white;
+}
+
+.vm-list{
+  margin: 0;
+  padding-left: 18px;
+  display: grid;
+  gap: 6px;
+  color: #ffffff;
 }
 
 #page-4{
@@ -518,5 +576,14 @@ footer{
 
   .output-row{
     grid-template-columns: 110px 1fr;
+  }
+
+  .vm-grid{
+    grid-template-columns: 1fr;
+  }
+
+  .about-company,
+  .vision-mission{
+    padding: 1.1em 1.2em;
   }
 }
