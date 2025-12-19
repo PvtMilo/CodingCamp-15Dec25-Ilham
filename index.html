@@ -33,6 +33,7 @@
     <main>
       <!-- PAGE 1 -->
       <div class="page-1" id="home">
+        <span id="greetingName"></span>
         <div class="welcome-wrapper">
           <h1 class="hero-title">EMPOWERING YOUR BUSINESS GROWTH</h1>
           <p class="hero-desc">
@@ -152,6 +153,32 @@
         </div>
       </div>
     </main>
+    <!-- Modal Overlay -->
+    <div class="modal-backdrop" id="nameModal" aria-hidden="true">
+      <div
+        class="modal"
+        role="dialog"
+        aria-modal="true"
+        aria-labelledby="modalTitle"
+      >
+        <h2 id="modalTitle">Masukkan Nama</h2>
+        <p class="muted">Nama akan dipakai untuk menyapa kamu.</p>
+
+        <form id="nameForm" autocomplete="off">
+          <label for="visitorName">Nama</label>
+          <input
+            id="visitorName"
+            type="text"
+            placeholder="Contoh: Samuel"
+            required
+          />
+          <div class="error" id="nameError" role="alert"></div>
+
+          <button type="submit">Lanjut</button>
+        </form>
+      </div>
+    </div>
+
     <!-- Footer External -->
     <footer></footer>
     <!-- JS External-->
