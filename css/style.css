@@ -16,6 +16,7 @@
 }
 
 body {
+  font-family: "Manrope", "Segoe UI", Arial, sans-serif;
   /* 4. Add accessible line-height */
   line-height: 1.5;
   /* 5. Improve text rendering */
@@ -44,6 +45,12 @@ p {
 }
 h1, h2, h3, h4, h5, h6 {
   text-wrap: balance;
+}
+
+/* Headline serif (hero & headings) */
+h1, h2, h3 {
+  font-family: "Playfair Display", "Times New Roman", serif;
+  letter-spacing: 0.01em;
 }
 
 /*
@@ -87,7 +94,6 @@ nav{
     border-radius: 50%;
     background-image: url(../assets/logo.png);
     background-size: cover;
-    border: 2px solid black;
 }
 
 .page-1{
