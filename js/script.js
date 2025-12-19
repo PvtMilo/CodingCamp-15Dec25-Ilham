@@ -25,8 +25,48 @@ function getGender() {
   return checked ? checked.value : "";
 }
 
+function isValidName(value) {
+  return /^[A-Za-z\s]+$/.test(value.trim());
+}
+
+function ensureNameErrorEl() {
+  let errorEl = document.getElementById("name-field-error");
+  if (!errorEl) {
+    errorEl = document.createElement("div");
+    errorEl.className = "error";
+    errorEl.id = "name-field-error";
+    nameInput.insertAdjacentElement("afterend", errorEl);
+  }
+  return errorEl;
+}
+
+function clearNameError() {
+  nameInput.setCustomValidity("");
+  const existingError = document.getElementById("name-field-error");
+  if (existingError) existingError.remove();
+}
+
+nameInput.addEventListener("input", () => {
+  clearNameError();
+});
+
 form.addEventListener("submit", (e) => {
   e.preventDefault(); // penting: biar halaman tidak refresh
+
+  clearNameError();
+  const trimmedName = nameInput.value.trim();
+
+  if (!isValidName(trimmedName)) {
+    const message = "Nama hanya boleh huruf dan spasi (tanpa angka/simbol).";
+    nameInput.setCustomValidity(message);
+    const nameFieldError = ensureNameErrorEl();
+    nameFieldError.textContent = message;
+    nameInput.reportValidity();
+    nameInput.focus();
+    return;
+  }
+
+  nameInput.value = trimmedName;
 
   const now = new Date();
   outTime.textContent = now.toLocaleString();
