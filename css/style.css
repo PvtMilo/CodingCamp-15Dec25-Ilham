@@ -202,6 +202,37 @@ nav{
   gap: 14px;
 }
 
+.gender-field{
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.gender-field > label{
+  margin: 0;
+}
+
+.gender-options{
+  display: flex;
+  align-items: center;
+  gap: 14px;
+}
+
+.radio-option{
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  margin: 0;
+}
+
+.gender-options input[type="radio"]{
+  width: auto;
+  padding: 0;
+  margin: 0;
+  background: transparent;
+  border: none;
+}
+
 .input-box{
   width: 100%;
   padding: 5px 5px;
@@ -265,7 +296,7 @@ button{
 .modal-backdrop {
   position: fixed;
   inset: 0;
-  background: rgba(0,0,0,.6);
+  background: #0f172a75;
   display: none;               /* default hidden */
   align-items: center;
   justify-content: center;
@@ -279,8 +310,8 @@ button{
 
 .modal {
   width: min(420px, 100%);
-  background: #111;
-  color: #fff;
+  background:#0F172A;
+  color: #ffffff;
   border: 1px solid rgba(255,255,255,.12);
   border-radius: 14px;
   padding: 18px;
@@ -290,6 +321,7 @@ button{
 .modal h2 {
   margin: 0 0 8px;
   font-size: 20px;
+  text-align: center;
 }
 
 .muted {
@@ -310,8 +342,8 @@ input {
   padding: 10px 12px;
   border-radius: 10px;
   border: 1px solid rgba(255,255,255,.15);
-  background: rgba(255,255,255,.06);
-  color: #fff;
+  background: rgb(255, 255, 255);
+  color: #000000;
   outline: none;
 }
 

@@ -74,7 +74,6 @@
             <form action="" method="get" class="form-example" id="contact-form">
               <div class="name-field">
                 <label for="name">Enter your name: </label>
-                <br />
                 <input
                   class="input-box"
                   type="text"
@@ -86,7 +85,6 @@
               </div>
               <div class="birthday-field">
                 <label for="birthday">Birthday:</label>
-                <br />
                 <input
                   class="input-box"
                   type="date"
@@ -96,27 +94,31 @@
                 />
               </div>
               <div class="gender-field">
-                <label for="gender">Jenis Kelamin:</label>
-                <br />
-                <input
-                  type="radio"
-                  id="laki"
-                  name="gender"
-                  value="laki-laki"
-                  required
-                />
-                <label for="html">Laki-Laki</label>
-                <input
-                  type="radio"
-                  id="perempuan"
-                  name="gender"
-                  value="perempuan"
-                />
-                <label for="css">Perempuan</label>
+                <label>Jenis Kelamin:</label>
+                <div class="gender-options">
+                  <label class="radio-option" for="laki">
+                    <input
+                      type="radio"
+                      id="laki"
+                      name="gender"
+                      value="laki-laki"
+                      required
+                    />
+                    Laki-Laki
+                  </label>
+                  <label class="radio-option" for="perempuan">
+                    <input
+                      type="radio"
+                      id="perempuan"
+                      name="gender"
+                      value="perempuan"
+                    />
+                    Perempuan
+                  </label>
+                </div>
               </div>
               <div class="message-field">
                 <label for="message">Pesan:</label>
-                <br />
                 <textarea
                   class="input-box"
                   id="message"
@@ -162,19 +164,18 @@
         aria-labelledby="modalTitle"
       >
         <h2 id="modalTitle">Masukkan Nama</h2>
-        <p class="muted">Nama akan dipakai untuk menyapa kamu.</p>
 
         <form id="nameForm" autocomplete="off">
           <label for="visitorName">Nama</label>
           <input
             id="visitorName"
             type="text"
-            placeholder="Contoh: Samuel"
+            placeholder="Nama"
             required
           />
           <div class="error" id="nameError" role="alert"></div>
 
-          <button type="submit">Lanjut</button>
+          <button type="submit">Submit</button>
         </form>
       </div>
     </div>
