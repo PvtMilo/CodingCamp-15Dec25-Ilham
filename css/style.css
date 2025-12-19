@@ -92,12 +92,12 @@ nav{
     width: 45px;
     height: 45px;
     border-radius: 50%;
-    background-image: url(../assets/logo.png);
+    background-image: url(../assets/logo.webp);
     background-size: cover;
 }
 
 .page-1{
-    background-image: url(../assets/company-image.jpg);
+    background-image: url(../assets/company.webp);
     background-size: cover;
     background-position: center;
     padding: 0em 4em 0em;
